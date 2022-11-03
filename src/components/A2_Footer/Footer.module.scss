@@ -1,0 +1,342 @@
+@import "../../assets/scss/app";
+
+.footer {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include desktop {
+    padding-top: vwD(77);
+    padding-bottom: vwD(33);
+  }
+
+  .inner {
+    @include inner;
+
+    .topBlock {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 60px;
+
+      @include desktop {
+        flex-direction: row;
+        padding-bottom: vwD(50);
+      }
+
+      .leftPart {
+        overflow: hidden;
+
+        .logo {
+          width: 236px;
+          height: 175px;
+          display: block;
+          margin-left: -25px;
+          margin-top: -25px;
+          margin-bottom: -60px;
+
+          @include desktop {
+            width: vwD(236);
+            height: vwD(175);
+            margin-left: vwD(-25);
+            margin-top: vwD(-25);
+            margin-bottom: vwD(-60);
+          }
+
+        }
+
+        .stay {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 150%;
+
+          @include desktop {
+            font-size: vwD(20);
+          }
+        }
+
+        .dont {
+          margin-top: 5px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+
+          @include desktop {
+            margin-top: vwD(5);
+            font-size: vwD(16);
+          }
+        }
+
+        .form {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          height: 54px;
+          background: #FFFFFF;
+          border-radius: 10px;
+          padding-left: 16px;
+          padding-right: 3px;
+          box-sizing: border-box;
+
+          @include desktop {
+            margin-top: vwD(20);
+            height: vwD(54);
+            border-radius: vwD(10);
+            width: vwD(413);
+            padding-left: vwD(20);
+            padding-right: vwD(4);
+          }
+
+          .field {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #000;
+
+            @include desktop {
+              font-size: vwD(12);
+            }
+
+            &::placeholder {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 150%;
+              color: #777777;
+              opacity: 0.5;
+
+              @include desktop {
+                font-size: vwD(12);
+              }
+            }
+
+          }
+
+          .submit {
+            @include button;
+            @include centerRow;
+            background: #A363F4;
+            border-radius: 10px;
+            width: 327px;
+            height: 46px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            transition: 0.3s;
+
+            @include desktop {
+              border-radius: vwD(10);
+              width: vwD(160);
+              height: vwD(46);
+              font-size: vwD(16);
+            }
+
+            &:hover {
+              background: #6618CA;
+            }
+
+          }
+
+
+        }
+
+        .policy {
+          margin-top: 16px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          color: #D3D3D3;
+
+          @include desktop {
+            font-size: vwD(14);
+            margin-top: vwD(10);
+          }
+        }
+
+
+      }
+
+      .right {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #D3D3D3;
+        margin-top: 60px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 60px;
+
+        @include desktop {
+          font-size: vwD(14);
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          grid-row-gap: 0;
+          margin-top: 0;
+          flex-grow: 1;
+          margin-left: vwD(170);
+        }
+
+        .group {
+
+          .groupLabel {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            color: #959595;
+
+            @include desktop {
+              font-size: vwD(18);
+            }
+          }
+
+          .groupLinks {
+            margin-top: 16px;
+
+            @include desktop {
+              margin-top: vwD(16);
+            }
+
+            .link {
+              display: block;
+              text-decoration: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+
+              @include desktop {
+                font-size: vwD(16);
+              }
+
+              &:not(:first-child) {
+                margin-top: 14px;
+
+                @include desktop {
+                  margin-top: vwD(14);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .bottomBlock {
+      border-top: 1px solid #546371;
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        padding-top: vwD(24);
+        height: vwD(72);
+        flex-direction: row;
+      }
+
+      .socialLinks {
+        align-self: stretch;
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop {
+          align-self: auto;
+          justify-content: normal;
+        }
+
+        .socialLink {
+          display: block;
+          width: 31.5px;
+          height: 31.5px;
+
+          @include desktop {
+            width: vwD(31.5);
+            height: vwD(31.5);
+          }
+
+          &:not(:first-child) {
+            margin-left: vwD(14);
+          }
+
+          svg {
+            @include desktop {
+              width: vwD(32);
+              height: vwD(32);
+            }
+          }
+
+          //&:not(:first-child) {
+          //  margin-left: 18px;
+          //
+          //  @include desktop {
+          //    margin-left: vwD(12);
+          //  }
+          //}
+        }
+      }
+
+      .bottom {
+        margin-top: 20px;
+        align-self: stretch;
+
+        @include desktop {
+          margin-top: 0;
+          flex-grow: 1;
+          margin-left: vwD(220);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .mark {
+          @include onlyDesktop();
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+
+          @include desktop {
+            font-size: vwD(14);
+          }
+        }
+
+        .bottomLinks {
+          align-self: stretch;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          @include desktop {
+            justify-content: flex-start;
+          }
+
+          .bottomLink {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            color: #D3D3D3;
+
+            @include desktop {
+              font-size: vwD(14);
+
+              &:not(:first-child) {
+                margin-left: 34px;
+
+                @include desktop {
+                  margin-left: vwD(34);
+                }
+              }
+            }
+          }
+
+        }
+
+
+      }
+    }
+  }
+
+}

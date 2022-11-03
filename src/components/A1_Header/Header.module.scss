@@ -1,0 +1,244 @@
+@import "../../assets/scss/app";
+
+.header {
+  @include container;
+  padding-top: 32px;
+
+  @include desktop {
+    padding-top: vwD(26);
+  }
+
+  .inner {
+    @include inner;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      height: 40px;
+      width: 200px;
+      //border: 1px solid red;
+      position: relative;
+      overflow: hidden;
+
+      @include desktop {
+        height: vwD(40);
+        width: vwD(200);
+      }
+
+      img {
+        @include absoluteCenter;
+        width: 257px;
+        height: 191px;
+
+        @include desktop {
+          width: vwD(236);
+          height: vwD(175);
+        }
+      }
+    }
+
+    .links {
+      @include onlyDesktop(flex);
+      @include absoluteCenter;
+
+      .link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #C6C6E9;
+        transition: 0.3s;
+        text-decoration: none;
+        position: relative;
+
+        @include desktop {
+          font-size: vwD(18);
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0px;
+          bottom: 0px;
+          width: 0%;
+          height: 1px;
+          background: #A363F4;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          color: #A363F4;
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &:not(:first-child) {
+          margin-left: 42px;
+
+          @include desktop {
+            margin-left: vwD(42);
+          }
+        }
+      }
+
+    }
+
+    .popupBtnWrapper {
+      position: relative;
+      z-index: 1;
+
+      .popupBtn {
+        @include button;
+        width: 100px;
+        height: 44px;
+        background: #1F1F41;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 21px;
+        padding-right: 17px;
+        box-sizing: border-box;
+        transition: 0.3s;
+
+        @include desktop {
+          width: vwD(100);
+          height: vwD(44);
+          padding-left: vwD(21);
+          padding-right: vwD(17);
+        }
+
+        &:hover {
+          background: #323269;
+        }
+
+        svg:nth-child(1) {
+          @include desktop {
+            width: vwD(18);
+            height: vwD(16);
+          }
+        }
+
+        svg:nth-child(2) {
+          @include desktop {
+            width: vwD(30);
+            height: vwD(30);
+          }
+        }
+      }
+
+      .popup {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 999;
+        width: 283px;
+        height: 220px;
+        background: #171b26;
+        padding: 32px 28px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 0px #CCC;
+
+        @include desktop {
+          border-radius: vwD(5);
+          top: vwD(50);
+          width: vwD(283);
+          height: vwD(220);
+          padding-top: vwD(32);
+          padding-bottom: vwD(32);
+          padding-left: vwD(28);
+          padding-right: vwD(28);
+        }
+
+
+        .btn {
+          @include button;
+          width: 228px;
+          height: 56px;
+          background: #A363F4;
+          border-radius: 10px;
+          @include centerRow;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: center;
+          transition: 0.3s;
+
+          @include desktop {
+            width: vwD(228);
+            height: vwD(56);
+            border-radius: vwD(10);
+            font-size: vwD(16);
+          }
+
+          &:hover {
+            background: #6618CA;
+          }
+        }
+
+        .items {
+          margin-top: 28px;
+
+          @include desktop {
+            margin-top: vwD(28);
+          }
+
+          .item {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+              margin-top: 10px;
+
+              @include desktop {
+                margin-top: vwD(10);
+              }
+            }
+
+            svg {
+              @include desktop {
+                width: vwD(20);
+              }
+
+              &:nth-child(1) {
+                @include desktop {
+                  height: vwD(16);
+                }
+              }
+              &:nth-child(2) {
+                @include desktop {
+                  height: vwD(20);
+                }
+              }
+            }
+
+            p {
+              margin-left: 10px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+
+              @include desktop {
+                margin-left: vwD(10);
+                font-size: vwD(16);
+              }
+            }
+          }
+        }
+
+
+      }
+
+
+    }
+
+
+
+
+  }
+}

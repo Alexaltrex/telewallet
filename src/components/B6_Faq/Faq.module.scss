@@ -1,0 +1,234 @@
+@import "../../assets/scss/app";
+
+.faq {
+  @include container;
+  padding-top: 70px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include desktop {
+    padding-top: vwD(90);
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      @include h2;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      @include desktop {
+        padding-left: vwD(24);
+        padding-right: vwD(24);
+      }
+    }
+
+    .contentMobile {
+      @include onlyMobile();
+      margin-top: 32px;
+
+      .slide {
+        width: 306px;
+        height: 263px;
+        background: #151923;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .question {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 140%;
+          letter-spacing: 0.01em;
+        }
+
+        .answer {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      .buttons {
+        margin-top: 16px;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          @include button;
+          display: flex;
+          align-items: center;
+
+          svg path {
+            transition: 0.3s;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+            transition: 0.3s;
+          }
+
+          &:nth-child(1) {
+            svg {
+              transform: rotate(180deg);
+            }
+
+            p {
+              margin-left: 8px;
+            }
+          }
+
+          &:nth-child(2) {
+            flex-direction: row-reverse;
+
+            p {
+              margin-right: 8px;
+            }
+          }
+
+          &_disable {
+            cursor: auto;
+
+            p {
+              color: #687B8E;
+            }
+
+            svg path {
+              fill: #687B8E;
+            }
+          }
+
+        }
+      }
+    }
+
+    .contentDesktop {
+      @include onlyDesktop(flex);
+      margin-top: vwD(80);
+      width: vwD(890);
+
+      .questions {
+        flex-shrink: 0;
+        width: vwD(247);
+        border-right: vwD(1) solid #546371;
+
+        .question {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          height: vwD(76);
+          padding-left: vwD(32);
+          font-weight: 600;
+          font-size: vwD(18);
+          line-height: 140%;
+          letter-spacing: 0.01em;
+          transition: 0.3s;
+
+          &_selected {
+            background: #151923;
+            //border-right: 2px solid #FF4EE4;
+            position: relative;
+
+            &::after {
+              display: block;
+              content: "";
+              position: absolute;
+              top: 0;
+              right: vwD(-1);
+              width: vwD(2);
+              height: 100%;
+              background: #FF4EE4;
+            }
+
+          }
+
+          p {
+            user-select: none;
+          }
+
+        }
+
+      }
+
+      .answerBlock {
+        flex-grow: 1;
+        padding-left: vwD(40);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .answer {
+          font-weight: 400;
+          font-size: vwD(20);
+          line-height: 140%;
+          letter-spacing: 0.01em;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+
+          .btn {
+            @include button;
+            display: flex;
+            align-items: center;
+
+            svg {
+              width: vwD(22);
+              height: vwD(16);
+
+              path {
+                transition: 0.3s;
+              }
+            }
+
+            p {
+              font-weight: 400;
+              font-size: vwD(16);
+              line-height: 140%;
+              letter-spacing: 0.01em;
+              transition: 0.3s;
+            }
+
+            &:nth-child(1) {
+              svg {
+                transform: rotate(180deg);
+              }
+
+              p {
+                margin-left: vwD(8);
+              }
+            }
+
+            &:nth-child(2) {
+              flex-direction: row-reverse;
+
+              p {
+                margin-right: vwD(8);
+              }
+            }
+
+            &_disable {
+              cursor: auto;
+
+              p {
+                color: #687B8E;
+              }
+
+              svg path {
+                fill: #687B8E;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

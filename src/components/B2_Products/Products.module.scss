@@ -1,0 +1,156 @@
+@import "../../assets/scss/app";
+
+.products {
+  @include container;
+  overflow: hidden;
+  padding-top: 70px;
+
+  @include desktop {
+    padding-top: vwD(84);
+  }
+
+  .inner {
+    @include inner;
+
+    @include desktop {
+      width: vwD(1000);
+    }
+
+
+    .title {
+      @include h2;
+      @include desktop {
+        width: vwD(647);
+      }
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      margin-top: 25px;
+
+      @include desktop {
+        font-size: vwD(20);
+        margin-top: vwD(21);
+        width: vwD(665);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    }
+
+    .items {
+      margin-top: 32px;
+
+      @include desktop {
+        margin-top: vwD(32);
+      }
+
+      .item {
+        margin-top: 64px;
+
+        @include desktop {
+          margin-top: vwD(64);
+          display: flex;
+        }
+
+        &:nth-child(even) {
+          @include desktop {
+            flex-direction: row-reverse;
+          }
+        }
+
+        .imgWrapper {
+          position: relative;
+          //overflow: hidden;
+          height: 350px;
+
+          @include desktop {
+            height: vwD(350);
+            width: 50%;
+          }
+
+          img {
+            position: absolute;
+            @include absoluteCenter;
+            height: 100%;
+
+            @include desktop {
+              height: auto;
+            }
+          }
+        }
+
+        &:nth-child(1) .imgWrapper img {
+          @include desktop {
+            width: vwD(340);
+
+          }
+        }
+
+        &:nth-child(2) .imgWrapper img {
+          @include desktop {
+            width: vwD(617);
+          }
+        }
+
+        &:nth-child(3) .imgWrapper img {
+          @include desktop {
+            width: vwD(484);
+          }
+        }
+
+        &:nth-child(4) .imgWrapper img {
+          @include desktop {
+            width: vwD(530);
+          }
+        }
+
+        &:nth-child(5) .imgWrapper img {
+          @include desktop {
+            width: vwD(583);
+          }
+        }
+
+        .texts {
+          margin-top: 24px;
+
+          @include desktop {
+            width: 50%;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .subtitle {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 140%;
+            text-align: center;
+
+            @include desktop {
+              font-size: vwD(30);
+              text-align: left;
+            }
+          }
+
+          .description {
+            color: #A4A3C7;
+            margin-top: 8px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+
+            @include desktop {
+              margin-top: vwD(12);
+              font-size: vwD(20);
+              line-height: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

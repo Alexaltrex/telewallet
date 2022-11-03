@@ -1,0 +1,236 @@
+@import "../../assets/scss/app";
+
+.tokenomics {
+  @include container;
+  padding-top: 82px;
+
+  @include desktop {
+    padding-top: vwD(140);
+  }
+
+  .inner {
+    @include inner;
+
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    .leftBlock {
+
+      .title {
+        @include h2;
+
+        @include desktop {
+          text-align: left;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      .text {
+        margin-top: 22px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+
+        @include desktop {
+          width: vwD(537);
+          font-size: vwD(20);
+          margin-top: vwD(28);
+        }
+      }
+
+      .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 45px;
+        margin-top: 46px;
+
+        @include desktop {
+          margin-top: vwD(46);
+          grid-row-gap: vwD(36);
+        }
+
+        .item {
+          .param {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #6C7AA4;
+
+            @include desktop {
+              font-size: vwD(16);
+            }
+          }
+
+          .value {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            margin-top: 5px;
+
+            @include desktop {
+              font-size: vwD(20);
+              margin-top: vwD(7);
+            }
+          }
+        }
+      }
+
+      @include desktop {
+        width: 50%;
+      }
+    }
+
+    .rightBlock {
+      margin-top: 65px;
+      align-self: center;
+
+      @include desktop {
+        width: 50%;
+        margin-top: 0;
+        align-self: normal;
+      }
+
+      .diagramMobile {
+        @include onlyMobile();
+        position: relative;
+
+        svg {
+          max-width: 100%;
+          height: auto;
+        }
+
+        img {
+          position: absolute;
+
+          //top: 170px;
+          //left: 175px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-54%, -3%);
+          width: 40px;
+          height: 40px;
+
+          @include desktop {
+            top: vwD(170);
+            left: vwD(175);
+            width: vwD(40);
+            height: vwD(40);
+          }
+        }
+      }
+
+      .diagramDesktop {
+        @include onlyDesktop();
+        position: relative;
+
+        .diagramWithoutCircle {
+          position: relative;
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        .circle {
+          position: absolute;
+          z-index: 1;
+          top: 20px;
+          left: 68px;
+
+          @include desktop {
+            top: vwD(20);
+            left: vwD(68);
+            width: vwD(520);
+            height: vwD(520);
+          }
+
+          circle:first-of-type {
+            transition: 0.3s;
+
+            &:hover {
+              //transform: scale(1.02);
+              transform-origin: center;
+              fill: red;
+              //fill: #2c7a6c;
+            }
+
+          }
+
+          path {
+            transition: 0.3s;
+
+            &:hover {
+              transform: scale(1.02);
+              transform-origin: center;
+              fill: red;
+            }
+
+            //&:nth-child(2):hover {
+            //  fill: #003264;
+            //}
+            //
+            //&:nth-child(3):hover {
+            //  fill: #ab0079;
+            //}
+            //
+            //&:nth-child(4):hover {
+            //  fill: #7265b0;
+            //}
+            //
+            //&:nth-child(5):hover {
+            //  fill: #9f9f9f;
+            //}
+            //
+            //&:nth-child(6):hover {
+            //  fill: #7c23ba;
+            //}
+            //
+            //&:nth-child(7):hover {
+            //  fill: #30a2a2;
+            //}
+            //
+            //&:nth-child(8):hover {
+            //  fill: #006699;
+            //}
+            //
+            //&:nth-child(9):hover {
+            //  fill: #9f9f9f;
+            //}
+            //
+            //&:nth-child(10):hover {
+            //  fill: #760283;
+            //}
+
+          }
+        }
+
+        .diagramWithoutCircle {
+          svg {
+            width: vwD(653);
+            height: vwD(482);
+          }
+        }
+
+        img {
+          position: absolute;
+          z-index: 3;
+          top: 295px;
+          left: 300px;
+          width: 50px;
+          height: 50px;
+
+          @include desktop {
+            top: vwD(295);
+            left: vwD(300);
+            width: vwD(50);
+            height: vwD(50);
+          }
+        }
+      }
+    }
+  }
+}

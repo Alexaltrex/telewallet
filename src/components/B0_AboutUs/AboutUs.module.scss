@@ -1,0 +1,161 @@
+@import "../../assets/scss/app";
+
+.aboutUs {
+  overflow: hidden;
+
+  @include container;
+  padding-top: 65px;
+
+  @include desktop {
+    padding-top: vwD(16);
+  }
+
+  .inner {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        @include h1;
+
+      }
+
+      .text {
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+
+        @include desktop {
+          margin-top: vwD(24);
+          font-size: vwD(24);
+          line-height: 140%;
+        }
+      }
+
+      img {
+        align-self: center;
+        width: 505.92px;
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      .buttons {
+        align-self: center;
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+          align-self: flex-start;
+          margin-top: vwD(36);
+          flex-direction: row;
+        }
+
+        .btn {
+          @include button;
+          @include centerRow;
+          width: 274px;
+          height: 74px;
+          background: #6F739D;
+          //border: 1px solid #6F739D;
+          border-radius: 999px;
+          //transition: 0.3s;
+
+          &:hover {
+            background: linear-gradient(0.25turn,
+                    #D47DF3,
+                    #7F53F9,
+                    #5878F5,
+                    #3BAFE7,
+                    #67D98C
+            );
+
+            .inner {
+              background: #1E2437;
+            }
+          }
+
+          .inner {
+            @include centerRow;
+            flex-direction: row;
+            width: 272px;
+            height: 72px;
+            background: #06070A;
+            border-radius: 999px;
+            transition: 0.3s;
+
+            @include desktop {
+              width: vwD(272);
+              height: vwD(72);
+
+            }
+
+            p {
+              margin-left: 12px;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 140%;
+
+              @include desktop {
+                margin-left: vwD(12);
+                font-size: vwD(18);
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            margin-top: 20px;
+
+            @include desktop {
+              margin-top: 0;
+              margin-left: vwD(32);
+            }
+          }
+
+          @include desktop {
+            width: vwD(274);
+            height: vwD(74);
+          }
+
+          &:nth-child(1) .inner svg {
+            @include desktop {
+              width: vwD(46);
+              height: vwD(44);
+            }
+          }
+
+          &:nth-child(2) .inner svg {
+            @include desktop {
+              width: vwD(43);
+              height: vwD(40);
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: none;
+
+      @include desktop {
+        display: block;
+        width: vwD(550);
+        transition: 0.3s;
+      }
+    }
+
+  }
+
+}

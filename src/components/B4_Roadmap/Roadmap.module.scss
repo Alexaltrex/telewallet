@@ -1,0 +1,161 @@
+@import "../../assets/scss/app";
+
+.roadmap {
+  overflow: hidden;
+  @include container;
+  padding-top: 67px;
+
+  @include desktop {
+    padding-top: vwD(80);
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      @include h2;
+
+      @include desktop {
+        width: vwD(613);
+      }
+    }
+
+    .stepsMobile {
+      @include onlyMobile(flex);
+      flex-direction: column;
+      margin-top: 16px;
+
+      .step {
+        &:nth-child(even) {
+          align-self: flex-end;
+        }
+
+        .imgWrapper {
+          position: relative;
+          height: 200px;
+          width: 200px;
+          //border: 2px solid red;
+
+          img {
+            position: absolute;
+            left: calc(65%);
+            top: 65%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        &:nth-child(1) .imgWrapper img {
+          top: calc(80%);
+          left: calc(95%);
+        }
+
+        &:nth-child(2) .imgWrapper img {
+          top: calc(50%);
+          left: calc(55%);
+        }
+
+        &:nth-child(3) .imgWrapper img {
+          left: calc(66%);
+        }
+
+        &:nth-child(4) .imgWrapper img {
+          top: calc(65%);
+          left: calc(45%);
+        }
+
+        &:nth-child(5) .imgWrapper img {
+          top: calc(85%);
+          left: calc(100%);
+        }
+
+        .options {
+          width: 240px;
+
+          .optionItem {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+              margin-top: 12px;
+            }
+
+            .value {
+              margin-left: 15px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 130%;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .stepsDesktop {
+      @include onlyDesktop();
+
+      .img {
+        margin: vwD(70) auto 0;
+        width: vwD(1278);
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: vwD(35);
+        margin-top: vwD(-60);
+
+        .step {
+
+          &:nth-child(1) {
+            margin-top: vwD(-115);
+
+
+          }
+
+          &:nth-child(3) {
+            margin-top: vwD(-110);
+            margin-left: vwD(15);
+          }
+
+          &:nth-child(4) {
+            margin-top: 0px;
+            margin-left: vwD(35);
+          }
+
+          &:nth-child(5) {
+            margin-top: vwD(-110);
+            margin-left: vwD(65);
+          }
+
+          .options {
+            .optionItem {
+              display: flex;
+              align-items: center;
+
+              &:not(:first-child) {
+                margin-top: vwD(12);
+              }
+
+              svg {
+                width: vwD(25);
+                height: vwD(25);
+              }
+
+              .value {
+                margin-left: vwD(15);
+                font-weight: 400;
+                font-size: vwD(14);
+                line-height: 130%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+}

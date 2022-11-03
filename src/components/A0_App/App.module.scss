@@ -1,0 +1,15 @@
+@import "../../assets/scss/app";
+
+.app {
+  background: #06070A;
+  //overflow: hidden;
+  background-image: url(../../assets/png/bgr_mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    background-image: url(../../assets/png/bgr_desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,129 @@
+@import "../../assets/scss/app";
+
+.table {
+  //@include centerRow;
+  overflow: auto;
+  margin-top: 48px;
+
+  //scrollbar-width: none;
+  //&::-webkit-scrollbar {
+  //  display: none;
+  //
+  //  @include desktop {
+  //    display: block;
+  //  }
+  //}
+
+  @include desktop {
+    margin-top: vwD(80);
+    @include centerRow;
+  }
+
+  .inner {
+    width: calc(1266px + 48px);
+
+    @include desktop {
+      width: vwD(1300);
+    }
+
+    .card {
+      background: #0F121C;
+      border-radius: 30px;
+      box-sizing: border-box;
+      padding: 50px 80px;
+      width: 1266px;
+      margin-left: 24px;
+      margin-right: 24px;
+      height: 704px;
+
+      @include desktop {
+        border-radius: vwD(30);
+        padding: vwD(50) vwD(50);
+        width: vwD(1300);
+        height: vwD(776);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .head {
+        padding: 0 24px 24px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        @include desktop {
+          padding: 0 vwD(24) vwD(24);
+        }
+
+        .headCell {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 140%;
+          text-transform: uppercase;
+
+          @include desktop {
+            font-size: vwD(22);
+          }
+        }
+      }
+
+      .body {
+        .row {
+          border-top: 1px solid #142254;
+          padding: 0 24px;
+          height: 50px;
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+
+          @include desktop {
+            padding: 0 vwD(24);
+            height: vwD(50);
+          }
+
+          &:last-child {
+            border-bottom: 1px solid #142254;
+          }
+
+          .cell {
+            display: flex;
+            align-items: center;
+
+            p {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 140%;
+
+              @include desktop {
+                font-size: vwD(16);
+              }
+            }
+          }
+
+        }
+      }
+
+      .footer {
+        padding: 24px 24px 0;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        @include desktop {
+          padding: vwD(24) vwD(24) 0;
+        }
+
+        .footerCell {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 140%;
+          text-transform: uppercase;
+
+          @include desktop {
+            font-size: vwD(22);
+          }
+        }
+      }
+
+
+    }
+
+  }
+}

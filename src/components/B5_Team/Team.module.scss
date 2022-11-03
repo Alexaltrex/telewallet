@@ -1,0 +1,157 @@
+@import "../../assets/scss/app";
+
+.team {
+  @include container;
+  padding-top: 136px;
+
+  @include desktop {
+    padding-top: vwD(93);
+  }
+
+  .inner {
+    @include inner;
+
+    .title {
+      @include h2;
+    }
+
+    .items {
+      margin-top: 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        margin-top: vwD(52);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: vwD(24);
+      }
+
+      .item {
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 306px;
+        height: 293px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #8D4BE6;
+        border-radius: 10px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+          //box-shadow: 5px 5px 5px 5px #CCC;
+        }
+
+        @include desktop {
+          width: vwD(306);
+          height: vwD(293);
+          padding-top: vwD(30);
+          border-radius: vwD(10);
+        }
+
+        &:not(:first-child) {
+          margin-top: 32px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+
+        }
+
+        img {
+          display: block;
+          width: 120px;
+
+          @include desktop {
+            width: vwD(120);
+          }
+        }
+
+        .name {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.01em;
+          margin-top: 10px;
+
+          @include desktop {
+            font-size: vwD(18);
+            margin-top: vwD(13);
+          }
+        }
+
+        .job {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.01em;
+          margin-top: 11px;
+
+          @include desktop {
+            margin-top: vwD(8);
+            font-size: vwD(14);
+          }
+
+        }
+
+        .links {
+          @include centerRow;
+          margin-top: 17px;
+
+          @include desktop {
+            margin-top: vwD(17);
+          }
+
+          a {
+            @include centerRow;
+            width: 35px;
+            height: 35px;
+            background: #413E61;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: 0.3s;
+
+            @include desktop {
+              width: vwD(35);
+              height: vwD(35);
+            }
+
+            &:not(:first-child) {
+              margin-left: 16px;
+
+              @include desktop {
+                margin-left: vwD(16);
+              }
+            }
+
+            &:hover {
+              background: #69659d;
+            }
+
+            &:nth-child(1) svg {
+              @include desktop {
+                width: vwD(17);
+                height: vwD(12);
+              }
+            }
+
+            &:nth-child(2) svg {
+              @include desktop {
+                width: vwD(17);
+                height: vwD(16);
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

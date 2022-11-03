@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/telewallet/static/css/main.2dd221f2.css",
-    "main.js": "/telewallet/static/js/main.ccff81f8.js",
+    "main.css": "/telewallet/static/css/main.7fabd9ae.css",
+    "main.js": "/telewallet/static/js/main.f0f22018.js",
     "static/js/787.47f2f7f8.chunk.js": "/telewallet/static/js/787.47f2f7f8.chunk.js",
     "static/media/bgr_desktop.png": "/telewallet/static/media/bgr_desktop.ec19fa71e4fb2493e6d0.png",
     "static/media/bgr_mobile.png": "/telewallet/static/media/bgr_mobile.22fac64fb0c2b73b770e.png",
-    "static/media/1.png": "/telewallet/static/media/1.94644a590d313af3c706.png",
+    "static/media/1.png": "/telewallet/static/media/1.500a1d2142f5b7fd986a.png",
     "static/media/aboutUs.png": "/telewallet/static/media/aboutUs.2bfa44c08cd5682029be.png",
     "static/media/4.png": "/telewallet/static/media/4.def4394c400293918da8.png",
-    "static/media/0.png": "/telewallet/static/media/0.2dcf015ab20c5a9080d3.png",
-    "static/media/3.png": "/telewallet/static/media/3.7d4678da57320c85663a.png",
-    "static/media/2.png": "/telewallet/static/media/2.0f81a09ff194269ce3d6.png",
+    "static/media/0.png": "/telewallet/static/media/0.45db296e694d1faec1b8.png",
+    "static/media/3.png": "/telewallet/static/media/3.7bf0b970d579200a119c.png",
+    "static/media/2.png": "/telewallet/static/media/2.c20916196d139f4533c2.png",
     "static/media/desktop.png": "/telewallet/static/media/desktop.ad100483e1a7bac29ebd.png",
     "static/media/logo.png": "/telewallet/static/media/logo.af559321cfb20e55f0e9.png",
     "static/media/logo_small.png": "/telewallet/static/media/logo_small.a371475586636e26877b.png",
     "index.html": "/telewallet/index.html",
-    "main.2dd221f2.css.map": "/telewallet/static/css/main.2dd221f2.css.map",
-    "main.ccff81f8.js.map": "/telewallet/static/js/main.ccff81f8.js.map",
+    "main.7fabd9ae.css.map": "/telewallet/static/css/main.7fabd9ae.css.map",
+    "main.f0f22018.js.map": "/telewallet/static/js/main.f0f22018.js.map",
     "787.47f2f7f8.chunk.js.map": "/telewallet/static/js/787.47f2f7f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dd221f2.css",
-    "static/js/main.ccff81f8.js"
+    "static/css/main.7fabd9ae.css",
+    "static/js/main.f0f22018.js"
   ]
 }

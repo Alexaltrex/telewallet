@@ -2,14 +2,29 @@
 
 .header {
   @include container;
-  padding-top: 32px;
+  //display: flex;
+  //align-items: center;
+  background: rgba(6, 7, 10, 0);
+  transition: 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 888;
+  height: 108px;
 
   @include desktop {
-    padding-top: vwD(26);
+    height: vwD(96);
+  }
+
+  &_scroll {
+    transition: 1s;
+    background: rgba(6, 7, 10, 1);
   }
 
   .inner {
     @include inner;
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;

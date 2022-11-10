@@ -3,11 +3,12 @@ import style from "./Header.module.scss";
 import {HashLink} from 'react-router-hash-link';
 import {svgIcons} from "../../assets/svg/svgIcons";
 import logo from "../../assets/png/logo.png"
-import {useRef, useState} from "react";
+import {FC, useRef, useState} from "react";
 import {useOutsideButNotOnTargetClick, useOutsideClick} from "../../hooks/useOutsideClick";
 //import { CSSTransition } from 'react-transition-group';
 import "./Header.css";
 import Fade from '@mui/material/Fade';
+import clsx from "clsx";
 
 const links = [
     {label: "About us", to: "/#about"},
@@ -23,7 +24,11 @@ const popup = [
     {icon: svgIcons.help, text: "Help Center"},
 ];
 
-export const Header = () => {
+interface IHeader {
+    pageYOffset: number
+}
+
+export const Header: FC<IHeader> = ({pageYOffset}) => {
     const [showPopup, setShowPopup] = useState(false);
 
     const outsideRef = useRef<HTMLDivElement>(null);
@@ -32,7 +37,10 @@ export const Header = () => {
     useOutsideButNotOnTargetClick(outsideRef, targetRef, () => setShowPopup(false));
 
     return (
-        <header className={style.header}>
+        <header className={clsx({
+            [style.header]: true,
+            [style.header_scroll]: pageYOffset > 50
+        })}>
             <div className={style.inner}>
                 <HashLink smooth
                           to="/"

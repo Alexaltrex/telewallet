@@ -12,4 +12,9 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  &_showPreloader {
+    overflow: hidden;
+    height: 100vh;
+  }
 }

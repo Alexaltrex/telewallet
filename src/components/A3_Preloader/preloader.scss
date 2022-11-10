@@ -1,0 +1,37 @@
+.logo {
+  animation-name: logoAnimation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.indicator {
+  animation-name: indicatorAnimation;
+  animation-timing-function: ease;
+  //animation-duration: 5s;
+}
+
+@keyframes indicatorAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+

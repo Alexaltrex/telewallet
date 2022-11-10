@@ -6,4 +6,5 @@
   color: #FFF;
   font-family: 'Inter', sans-serif;
   font-style: normal;
+  user-select: none;
 }

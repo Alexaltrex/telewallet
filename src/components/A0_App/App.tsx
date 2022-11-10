@@ -13,6 +13,9 @@ import {Roadmap} from "../B4_Roadmap/Roadmap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {throttle} from "../../utils/throttle";
+import {Preloader} from "../A3_Preloader/Preloader";
+import Fade from "@mui/material/Fade";
+import clsx from "clsx";
 
 export const App = () => {
     const [x, setX] = useState(0);
@@ -37,12 +40,37 @@ export const App = () => {
     //     AOS.refresh()
     // }, []);
 
+    const preloaderDuration = 4000;
+    const [showPreloader, setShowPreloader] = useState(true);
+    useEffect(() => {
+        setTimeout(() => setShowPreloader(false), preloaderDuration)
+    }, []);
+
+    const [pageYOffset, setPageYOffset] = useState(0);
+    useEffect(() => {
+        document.addEventListener(
+            'scroll',
+            throttle(() => {
+                setPageYOffset(window.pageYOffset);
+            }, 100)
+        );
+        return document.removeEventListener(
+            'scroll',
+            throttle(() => {
+                setPageYOffset(window.pageYOffset);
+            }, 100)
+        );
+    });
 
     return (
-        <div className={style.app}
+        <div className={clsx({
+            [style.app]: true,
+            [style.app_showPreloader]: showPreloader,
+        })}
              onMouseMove={onMouseMoveThrottle}
         >
-            <Header/>
+            <Preloader showPreloader={showPreloader} preloaderDuration={preloaderDuration}/>
+            <Header pageYOffset={pageYOffset}/>
             <AboutUs x={x} y={y}/>
             <Blocks/>
             <Products/>

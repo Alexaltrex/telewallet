@@ -4,10 +4,10 @@
   overflow: hidden;
 
   @include container;
-  padding-top: 65px;
+  padding-top: calc(65px + 76px);
 
   @include desktop {
-    padding-top: vwD(16);
+    padding-top: vwD(16 + 76);
   }
 
   .inner {

@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/telewallet/static/css/main.867e9cf2.css",
-    "main.js": "/telewallet/static/js/main.dc061bf0.js",
+    "main.css": "/telewallet/static/css/main.35bf3642.css",
+    "main.js": "/telewallet/static/js/main.6e82e77a.js",
+    "static/css/305.170dbc8c.chunk.css": "/telewallet/static/css/305.170dbc8c.chunk.css",
+    "static/js/305.c862bec1.chunk.js": "/telewallet/static/js/305.c862bec1.chunk.js",
     "static/js/787.47f2f7f8.chunk.js": "/telewallet/static/js/787.47f2f7f8.chunk.js",
+    "static/css/548.234ea017.chunk.css": "/telewallet/static/css/548.234ea017.chunk.css",
+    "static/js/548.879135dd.chunk.js": "/telewallet/static/js/548.879135dd.chunk.js",
     "static/media/bgr_desktop.png": "/telewallet/static/media/bgr_desktop.ec19fa71e4fb2493e6d0.png",
     "static/media/bgr_mobile.png": "/telewallet/static/media/bgr_mobile.22fac64fb0c2b73b770e.png",
     "static/media/1.png": "/telewallet/static/media/1.500a1d2142f5b7fd986a.png",
@@ -15,12 +19,16 @@
     "static/media/logo.png": "/telewallet/static/media/logo.b8b160044afc09cfa7be.png",
     "static/media/logo_small.png": "/telewallet/static/media/logo_small.a371475586636e26877b.png",
     "index.html": "/telewallet/index.html",
-    "main.867e9cf2.css.map": "/telewallet/static/css/main.867e9cf2.css.map",
-    "main.dc061bf0.js.map": "/telewallet/static/js/main.dc061bf0.js.map",
-    "787.47f2f7f8.chunk.js.map": "/telewallet/static/js/787.47f2f7f8.chunk.js.map"
+    "main.35bf3642.css.map": "/telewallet/static/css/main.35bf3642.css.map",
+    "main.6e82e77a.js.map": "/telewallet/static/js/main.6e82e77a.js.map",
+    "305.170dbc8c.chunk.css.map": "/telewallet/static/css/305.170dbc8c.chunk.css.map",
+    "305.c862bec1.chunk.js.map": "/telewallet/static/js/305.c862bec1.chunk.js.map",
+    "787.47f2f7f8.chunk.js.map": "/telewallet/static/js/787.47f2f7f8.chunk.js.map",
+    "548.234ea017.chunk.css.map": "/telewallet/static/css/548.234ea017.chunk.css.map",
+    "548.879135dd.chunk.js.map": "/telewallet/static/js/548.879135dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.867e9cf2.css",
-    "static/js/main.dc061bf0.js"
+    "static/css/main.35bf3642.css",
+    "static/js/main.6e82e77a.js"
   ]
 }

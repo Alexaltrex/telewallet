@@ -17,7 +17,10 @@ import {Preloader} from "../A3_Preloader/Preloader";
 import Fade from "@mui/material/Fade";
 import clsx from "clsx";
 
-export const App = () => {
+import backMobile from "../../assets/png/bgr_mobile.png";
+import backDesktop from "../../assets/png/bgr_desktop.png";
+
+const App = () => {
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
 
@@ -40,7 +43,8 @@ export const App = () => {
     //     AOS.refresh()
     // }, []);
 
-    const preloaderDuration = 4000;
+    const [imgLoaded, setImgLoaded] = useState(false);
+    const preloaderDuration = 1000;
     const [showPreloader, setShowPreloader] = useState(true);
     useEffect(() => {
         setTimeout(() => setShowPreloader(false), preloaderDuration)
@@ -69,18 +73,35 @@ export const App = () => {
         })}
              onMouseMove={onMouseMoveThrottle}
         >
-            <Preloader showPreloader={showPreloader} preloaderDuration={preloaderDuration}/>
-            <Header pageYOffset={pageYOffset}/>
-            <AboutUs x={x} y={y}/>
-            <Blocks/>
-            <Products/>
-            <Tokenomics/>
-            <Table/>
-            <Roadmap/>
-            <Team/>
-            <Faq/>
-            <Footer/>
+            <Preloader showPreloader={showPreloader || !imgLoaded} preloaderDuration={preloaderDuration}/>
+
+            <img src={backMobile}
+                 alt=""
+                 className={style.backMobile}
+                 onLoad={() => setImgLoaded(true)}
+            />
+            <img src={backDesktop}
+                 alt=""
+                 className={style.backDesktop}
+                 onLoad={() => setImgLoaded(true)}
+            />
+
+            <div className={style.content}>
+                <Header pageYOffset={pageYOffset}/>
+                <AboutUs x={x} y={y}/>
+                <Blocks/>
+                <Products/>
+                <Tokenomics/>
+                <Table/>
+                <Roadmap/>
+                <Team/>
+                <Faq/>
+                <Footer/>
+            </div>
+
+
         </div>
     );
 }
+export default App;
 

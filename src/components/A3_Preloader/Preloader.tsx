@@ -18,11 +18,11 @@ export const Preloader: FC<IPreloader> = ({
     return (
         <Fade in={showPreloader} timeout={1000} appear={false}>
             <div className={style.preloader}>
-                {/*<div className={clsx(style.indicator, "indicator")}*/}
-                {/*     style={{*/}
-                {/*         animationDuration: `${preloaderDuration}ms`*/}
-                {/*     }}*/}
-                {/*/>*/}
+                <div className={clsx(style.indicator, "indicator")}
+                     style={{
+                         animationDuration: `${preloaderDuration}ms`
+                     }}
+                />
                 <img src={logo} alt="" className={clsx(style.logo, "logo")}/>
             </div>
         </Fade>

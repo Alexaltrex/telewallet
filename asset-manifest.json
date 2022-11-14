@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/telewallet/static/css/main.35bf3642.css",
-    "main.js": "/telewallet/static/js/main.6e82e77a.js",
+    "main.js": "/telewallet/static/js/main.ae8d723b.js",
     "static/css/305.170dbc8c.chunk.css": "/telewallet/static/css/305.170dbc8c.chunk.css",
-    "static/js/305.c862bec1.chunk.js": "/telewallet/static/js/305.c862bec1.chunk.js",
+    "static/js/305.7d0802b1.chunk.js": "/telewallet/static/js/305.7d0802b1.chunk.js",
     "static/js/787.47f2f7f8.chunk.js": "/telewallet/static/js/787.47f2f7f8.chunk.js",
     "static/css/548.234ea017.chunk.css": "/telewallet/static/css/548.234ea017.chunk.css",
     "static/js/548.879135dd.chunk.js": "/telewallet/static/js/548.879135dd.chunk.js",
@@ -20,15 +20,15 @@
     "static/media/logo_small.png": "/telewallet/static/media/logo_small.a371475586636e26877b.png",
     "index.html": "/telewallet/index.html",
     "main.35bf3642.css.map": "/telewallet/static/css/main.35bf3642.css.map",
-    "main.6e82e77a.js.map": "/telewallet/static/js/main.6e82e77a.js.map",
+    "main.ae8d723b.js.map": "/telewallet/static/js/main.ae8d723b.js.map",
     "305.170dbc8c.chunk.css.map": "/telewallet/static/css/305.170dbc8c.chunk.css.map",
-    "305.c862bec1.chunk.js.map": "/telewallet/static/js/305.c862bec1.chunk.js.map",
+    "305.7d0802b1.chunk.js.map": "/telewallet/static/js/305.7d0802b1.chunk.js.map",
     "787.47f2f7f8.chunk.js.map": "/telewallet/static/js/787.47f2f7f8.chunk.js.map",
     "548.234ea017.chunk.css.map": "/telewallet/static/css/548.234ea017.chunk.css.map",
     "548.879135dd.chunk.js.map": "/telewallet/static/js/548.879135dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35bf3642.css",
-    "static/js/main.6e82e77a.js"
+    "static/js/main.ae8d723b.js"
   ]
 }
